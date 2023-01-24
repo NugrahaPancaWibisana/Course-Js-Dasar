@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ternary operator</title>
+</head>
+<body>
+    <script>
+        const nilai = 90;
+        let ucapan;
+
+        if (nilai >= 90 || nilai > 90) {
+            ucapan = "kamu Lulus Dengan nilai terbaik";
+        } else if (nilai >= 75 || nilai > 75) {
+            ucapan = "Kamu Lulus KKM";
+        } else {
+            ucapan = "Kamu Tidak Lulus"
+        }
+
+        document.writeln(ucapan);
+        document.writeln("<br>");
+
+        const ucapan1 = nilai >= 75 ? "Kamu Lulus" : "Kamu Tidak Lulus";
+        document.writeln(ucapan1);
+    </script>
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>destructuring</title>
+  </head>
+  <body>
+    <script>
+      {
+        const names = ["Nugraha", "Panca", "Wibisana", "Budi", "Asep"];
+        const [firstName, middleName, lastName, ...other] = names;
+
+        console.info(firstName);
+        console.info(middleName);
+        console.info(lastName);
+        console.info(other);
+      }
+
+      {
+        const person = {
+          firstName: "Nugraha",
+          middleName: "Panca",
+          lastName: "Wibisana",
+          address: {
+            street: "gempol1",
+            city: "subang",
+            country: "indonesia",
+          },
+          hobby: "ngoding",
+          favoriteFood: "cumi",
+        };
+
+        const {firstName, middleName, lastName, address: { street, city, country }, ...other} = person;
+        console.info(firstName);
+        console.info(middleName);
+        console.info(lastName);
+        console.info(street);
+        console.info(city);
+        console.info(country);
+        console.info(other);
+      }
+
+      {
+        function displayPerson({firstName, middleName, lastName}){
+            console.info(firstName);
+            console.info(middleName);
+            console.info(lastName);
+        };
+
+        const person ={
+            firstName: "Nugraha",
+            middleName: "Panca",
+            lastName: "Wibisana"
+        }
+
+        displayPerson(person);
+      }
+
+      {
+        function sum([first, second]) {
+            return first + second;
+        }
+
+        console.info(sum([1,1]));
+        console.info(sum([10,10]));
+      }
+
+      {
+        // default value bisa di tambahkan
+        const names =["nugraha"];
+        const [firstName, middleName = "panca", lastName = null] = names;
+
+        console.info(firstName);
+        console.info(middleName);
+        console.info(lastName);
+      }
+    </script>
+  </body>
+</html>

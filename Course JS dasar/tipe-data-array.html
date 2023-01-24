@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tipe data array</title>
+</head>
+<body>
+    <script>
+        const arrayKosong = [];
+        const arrayNama = ["Nugraha", "panca", "wibisana", 1, true];
+
+        const names = [];
+        names.push("Nugraha");
+        names.push("Panca", "wibisana", "ayam", true, 100);
+
+        console.table(names);
+
+        console.info(names[0]);
+        console.info(names[1]);
+        console.info(names[2]);
+
+        names[0] = "Programmer";
+        names[1] = "masa depan";
+
+        console.table(names);
+
+        delete names[3];
+
+        console.table(names);
+    </script>
+</body>
+</html>

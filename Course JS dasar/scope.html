@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>scope</title>
+</head>
+<body>
+    <script>
+        // global scope
+        let counter = 0;
+
+        function hitMe() {
+            // local scope hitMe
+            counter++;
+        }
+
+        function other(){
+            // local scope other
+        }
+
+        hitMe();
+        hitMe();
+
+        document.writeln(`<p>${counter}</P>`);
+
+        function first(){
+            // local first scope
+            let firstVariable = "first";
+            function firstNested() {
+                document.writeln(`<p>${firstVariable}</P>`);
+            }
+            firstNested();
+        }
+
+        function second(){
+            // local second scope
+            let secondVariable = "second";
+            function secondNested() {
+                document.writeln(`<p>${secondVariable}</P>`);
+            }
+            secondNested();
+        }
+
+        first();
+        second();
+    </script>
+</body>
+</html>
